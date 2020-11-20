@@ -6,6 +6,7 @@ import { SearchOutlined } from '@ant-design/icons';
 import './MainComponent.scss';
 import { useEffect, useContext } from 'react';
 import { StoreContext } from '../../store.jsx';
+import MerchantComponent from '../MerchantComponent';
 // import style from './main.scss';
 
 export const Main = () => {
@@ -38,6 +39,14 @@ export const Main = () => {
   const onCategoryChange = (event) => {
     dispatch({
       type: 'UPDATE_CATEGORY',
+      payload: event.target.value,
+    });
+    console.log(event.target.value);
+  };
+
+  const onSubCategoryChange = (event) => {
+    dispatch({
+      type: 'UPDATE_SELECTED_SUB_CATEGORY',
       payload: event.target.value,
     });
     console.log(event.target.value);
@@ -137,18 +146,29 @@ export const Main = () => {
                   </option>
                 ))}
               </select>
-              ประเภทร้านค้า
-              <form onChange={onCategoryChange}>
-                {state.data.categories.map((category) => (
-                  <div key={category.name}>
-                    <input type='radio' value={category.name} name='category' />
-                    <label htmlFor={category.name}>{category.name}</label>
-                  </div>
-                ))}
-              </form>
+              {state.subCategories.subcategories?.length > 0 && (
+                <>
+                  <p>ประเภทร้านค้า {state.category}</p>
+                  <form onChange={onSubCategoryChange}>
+                    {state.subCategories.subcategories &&
+                      state.subCategories.subcategories.map((category) => (
+                        <div key={category}>
+                          <input
+                            type='radio'
+                            value={category}
+                            name='category'
+                          />
+                          <label htmlFor={category}>{category}</label>
+                        </div>
+                      ))}
+                  </form>
+                </>
+              )}
             </div>
           </div>
-          <div className='rightBox'>rightBox</div>
+          <div className='rightBox'>
+            <MerchantComponent />
+          </div>
         </div>
       </div>
     </div>

@@ -34,6 +34,11 @@ const reducer = (state, action) => {
             (category) => category.name === action.payload
           ) ?? [],
       };
+    case 'UPDATE_SELECTED_SUB_CATEGORY':
+      return {
+        ...state,
+        selectedSubCategory: action.payload,
+      };
     case 'UPDATE_PRICE':
       return {
         ...state,
