@@ -1,4 +1,5 @@
 import React from 'react';
+import './SidebarComponent.scss';
 import { useContext } from 'react';
 import { StoreContext } from '../../store.jsx';
 

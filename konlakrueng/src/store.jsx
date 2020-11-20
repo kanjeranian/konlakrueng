@@ -5,6 +5,7 @@ const initialState = {
     provinces: [],
     categories: [],
     priceRange: [],
+    merchants: [],
   },
   province: 'all',
   category: '',

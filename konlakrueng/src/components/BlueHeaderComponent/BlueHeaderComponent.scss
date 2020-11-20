@@ -1,0 +1,13 @@
+@import './../../styles/color.scss';
+@import './../../styles/responsive.scss';
+@import './../../styles/fonts.scss';
+
+.blueHeader {
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  background-color: $color-bg-blue;
+  color: white;
+  height: 46px;
+  padding: 0.75rem 2rem;
+}

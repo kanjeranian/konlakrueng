@@ -1,7 +1,5 @@
 import React from 'react';
-// import { useContext } from 'react';
-// import { StoreContext } from '../../store.jsx';
-
+import './BlueHeaderComponent.scss';
 export const BlueHeaderComponent = () => {
   // const { state, dispatch } = useContext(StoreContext);
 

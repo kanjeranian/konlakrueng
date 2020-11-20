@@ -1,4 +1,5 @@
 import React from 'react';
+import './WhiteHeaderComponent.scss';
 import logo from './../../img/halfhalf-logo.png';
 import filter from './../../img/filter.png';
 import logoMini from './../../img/halfhalf-logo-mini.png';

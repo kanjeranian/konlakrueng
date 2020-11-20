@@ -1,0 +1,92 @@
+@import './../../styles/color.scss';
+@import './../../styles/responsive.scss';
+@import './../../styles/fonts.scss';
+
+.whiteHeader {
+  background-color: $color-bg-white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid black;
+  .whiteHeaderLeft {
+    border: 2px solid red;
+    height: 60px;
+    padding: 10px 2rem;
+    @include mobile {
+      padding: 10px 1rem;
+    }
+    .logo {
+      height: 40px;
+      width: auto;
+      display: block;
+      @include mobile {
+        display: none;
+      }
+    }
+    .logoMini {
+      height: 40px;
+      width: auto;
+      @include mobile {
+        display: block;
+      }
+      @include desktop {
+        display: none;
+      }
+    }
+  }
+  .whiteHeaderRight {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    margin-left: auto;
+    align-items: center;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin-right: 2rem;
+    flex: 1;
+    box-shadow: 0px 0px 1px black;
+    border: 2px solid blue;
+    @include mobile {
+      margin-right: 1rem;
+    }
+    .location {
+      border: solid green;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height: 100%;
+      width: 12rem;
+      @include mobile {
+        display: none;
+      }
+      @include desktop {
+        display: block;
+      }
+    }
+    .finderInput {
+      border: solid green;
+      height: 100%;
+      width: calc(100%);
+      font-size: 1rem;
+      text-overflow: ellipsis;
+      padding-left: 11px;
+    }
+    .finderButton {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      padding: 0 1.5rem;
+      border: solid green;
+    }
+  }
+  .filter {
+    height: 20px;
+    width: auto;
+    display: none;
+    margin-right: 1rem;
+    cursor: pointer;
+    @include mobile {
+      display: block;
+    }
+  }
+}
