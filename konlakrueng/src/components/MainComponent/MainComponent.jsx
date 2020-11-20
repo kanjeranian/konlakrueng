@@ -137,6 +137,15 @@ export const Main = () => {
                   </option>
                 ))}
               </select>
+              ประเภทร้านค้า
+              <form onChange={onCategoryChange}>
+                {state.data.categories.map((category) => (
+                  <div key={category.name}>
+                    <input type='radio' value={category.name} name='category' />
+                    <label htmlFor={category.name}>{category.name}</label>
+                  </div>
+                ))}
+              </form>
             </div>
           </div>
           <div className='rightBox'>rightBox</div>

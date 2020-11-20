@@ -4,10 +4,12 @@ const initialState = {
   data: {
     provinces: [],
     categories: [],
+    priceRange: [],
   },
   province: 'all',
   category: '',
   subCategories: [],
+  selectedSubCategory: '',
   priceRange: 'all',
 };
 
@@ -33,20 +35,9 @@ const reducer = (state, action) => {
           ) ?? [],
       };
     case 'UPDATE_PRICE':
-      if (action.payload === null) {
-        return {
-          ...state,
-          priceRange: action.payload,
-        };
-      }
       return {
         ...state,
-        priceRange: state.data.priceRange
-          .map((range, index) => ({
-            range: range,
-            priceLevel: index + 1,
-          }))
-          .find((range) => range.range === action.payload),
+        priceRange: action.payload,
       };
     default:
       return state;
