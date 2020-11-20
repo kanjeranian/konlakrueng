@@ -10,6 +10,19 @@ const Tag = (isOpen) => {
     </div>
   );
 };
+
+const PriceLevel = ({ level }) => {
+  const bold = '฿'.repeat(level);
+  const normal = '฿'.repeat(4 - level);
+  console.log(level);
+  return (
+    <>
+      <span className='moneyDark '>{bold}</span>
+      <span className='moneyLight'>{normal}</span>
+    </>
+  );
+};
+
 export const MerchantComponent = () => {
   const { state } = useContext(StoreContext);
   return (
@@ -28,6 +41,14 @@ export const MerchantComponent = () => {
               <div className='cardName'>{merchant.shopNameTH}</div>
               <Tag isOpen />
             </div>
+            <div className='cardSubHeader'>
+              {merchant.subcategoryName} |{' '}
+              <PriceLevel level={merchant.priceLevel} /> | addressProvinceName
+              addressDistrictName
+            </div>
+            <div className='br' />
+            <span>highlight text</span>
+            <span>เมนูแนะนำ? && เมนูแนะนำ</span>
           </div>
         </div>
       ))}

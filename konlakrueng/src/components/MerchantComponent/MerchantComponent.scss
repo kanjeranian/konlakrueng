@@ -1,7 +1,12 @@
 @import './../../styles/color.scss';
 @import './../../styles/responsive.scss';
 @import './../../styles/fonts.scss';
-
+.moneyDark {
+  color: $color-text-dark-grey;
+}
+.moneyLight {
+  color: $color-text-grey3;
+}
 .rightBox {
   //   border: 1px solid black;
   //   background-color: white;
@@ -41,16 +46,28 @@
       padding: 16px;
       .cardHeader {
         display: flex;
-        // padding: 16px;
+        .cardName {
+          color: black;
+          font-size: 20px;
+          font-weight: 600;
+        }
+      }
+      .cardSubHeader {
+        // display: flex;
+        color: $color-text-grey2;
       }
     }
   }
 }
 
+.br {
+  border-bottom: 1px solid black;
+}
 .tagContainer {
   .tag {
     background-color: $color-bg-green;
     margin: 0px 8px 0px 16px;
+    border-radius: 2px;
     padding: 0 7px;
     font-size: 12px;
     font-weight: 600;
