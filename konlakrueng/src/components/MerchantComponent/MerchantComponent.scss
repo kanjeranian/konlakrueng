@@ -4,6 +4,10 @@
 .moneyDark {
   color: $color-text-dark-grey;
 }
+.f14grey {
+  color: $color-text-grey2;
+  font-size: 14px;
+}
 .moneyLight {
   color: $color-text-grey3;
 }
@@ -43,7 +47,7 @@
       //   border: 1px solid green;
       height: 234px;
       width: calc(100% - 234px);
-      padding: 16px;
+      padding: 14px;
       .cardHeader {
         display: flex;
         .cardName {
@@ -64,7 +68,7 @@
 .br {
   border-bottom: 0.5px solid rgb(226, 232, 240);
   width: 65%;
-  margin: 15px 0px;
+  margin: 14px 0px;
 }
 .sep {
   margin: 0px 15px;

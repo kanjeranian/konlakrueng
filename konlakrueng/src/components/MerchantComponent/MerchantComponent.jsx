@@ -41,7 +41,7 @@ export const MerchantComponent = () => {
               <div className='cardName'>{merchant.shopNameTH}</div>
               <Tag isOpen />
             </div>
-            <div className='cardSubHeader'>
+            <div className='f14grey cardSubHeader'>
               <div>{merchant.subcategoryName}</div> <div className='sep'>|</div>
               <div>
                 <PriceLevel level={merchant.priceLevel} />
@@ -52,7 +52,9 @@ export const MerchantComponent = () => {
               </div>
             </div>
             <div className='br' />
-            <span>highlight text</span>
+            <div className='f14grey'>
+              {merchant.highlightText && <div>{merchant.highlightText}</div>}
+            </div>
             <span>เมนูแนะนำ? && เมนูแนะนำ</span>
           </div>
         </div>
