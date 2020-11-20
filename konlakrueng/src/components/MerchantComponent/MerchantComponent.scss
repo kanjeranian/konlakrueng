@@ -53,15 +53,21 @@
         }
       }
       .cardSubHeader {
-        // display: flex;
+        display: flex;
         color: $color-text-grey2;
+        flex-wrap: wrap;
       }
     }
   }
 }
 
 .br {
-  border-bottom: 1px solid black;
+  border-bottom: 0.5px solid rgb(226, 232, 240);
+  width: 65%;
+  margin: 15px 0px;
+}
+.sep {
+  margin: 0px 15px;
 }
 .tagContainer {
   .tag {

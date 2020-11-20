@@ -42,9 +42,14 @@ export const MerchantComponent = () => {
               <Tag isOpen />
             </div>
             <div className='cardSubHeader'>
-              {merchant.subcategoryName} |{' '}
-              <PriceLevel level={merchant.priceLevel} /> | addressProvinceName
-              addressDistrictName
+              <div>{merchant.subcategoryName}</div> <div className='sep'>|</div>
+              <div>
+                <PriceLevel level={merchant.priceLevel} />
+              </div>
+              <div className='sep'>|</div>
+              <div>
+                {merchant.addressDistrictName} {merchant.addressProvinceName}
+              </div>
             </div>
             <div className='br' />
             <span>highlight text</span>
