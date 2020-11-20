@@ -34,6 +34,23 @@ export const Main = () => {
     });
     console.log(event.target.value);
   };
+
+  const onCategoryChange = (event) => {
+    dispatch({
+      type: 'UPDATE_CATEGORY',
+      payload: event.target.value,
+    });
+    console.log(event.target.value);
+  };
+
+  const onPriceChange = (event) => {
+    dispatch({
+      type: 'UPDATE_PRICE',
+      payload: event.target.value,
+    });
+    console.log(event.target.value);
+  };
+
   return (
     <div className='app'>
       <div className='whiteHeader contentContainer'>
@@ -83,20 +100,43 @@ export const Main = () => {
           <div className='leftBox'>
             <div className='filterBox'>
               ประเภทร้านค้า
-              {/* <form> */}
-              {state.data.categories.map((i) => (
-                <div key={state.data.categories[i]}>
-                  <input
-                    type='radio'
-                    value={state.data.categories[i]}
-                    name='category'
-                  />
-                  <label for={state.data.categories[i]}>
-                    {state.data.categories[i]}
-                  </label>
-                </div>
-              ))}
-              {/* </form> */}
+              <form onChange={onCategoryChange}>
+                {state.data.categories.map((category) => (
+                  <div key={category.name}>
+                    <input type='radio' value={category.name} name='category' />
+                    <label htmlFor={category.name}>{category.name}</label>
+                  </div>
+                ))}
+              </form>
+              จังหวัด/ใกล้ฉัน
+              <form onChange={onLocationChange}>
+                <select
+                  className='location'
+                  name='locationSide'
+                  onChange={onLocationChange}
+                  value={state.province}>
+                  <option value='all'>All</option>
+                  <option value='nearme'>Near me</option>
+                  {state.data.provinces.map((province) => (
+                    <option value={province} key={province}>
+                      {province}
+                    </option>
+                  ))}
+                </select>
+              </form>
+              ช่วงราคาสินค้า (บาท)
+              <select
+                className='price'
+                name='price'
+                onChange={onPriceChange}
+                value={state.priceRange}>
+                <option value='all'>All</option>
+                {state.data.priceRange.map((priceRange, index) => (
+                  <option value={index + 1} key={index + 1}>
+                    {priceRange}
+                  </option>
+                ))}
+              </select>
             </div>
           </div>
           <div className='rightBox'>rightBox</div>

@@ -8,7 +8,7 @@ const initialState = {
   province: 'all',
   category: '',
   subCategories: [],
-  priceRange: {},
+  priceRange: 'all',
 };
 
 const reducer = (state, action) => {
@@ -32,11 +32,11 @@ const reducer = (state, action) => {
             (category) => category.name === action.payload
           ) ?? [],
       };
-    case 'UPDATE_PRICE_RANGES':
+    case 'UPDATE_PRICE':
       if (action.payload === null) {
         return {
           ...state,
-          priceRange: {},
+          priceRange: action.payload,
         };
       }
       return {
