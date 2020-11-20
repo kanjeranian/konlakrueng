@@ -1,0 +1,240 @@
+@import './../../styles/color.scss';
+@import './../../styles/responsive.scss';
+@import './../../styles/fonts.scss';
+
+* {
+  box-sizing: border-box;
+  border: 0 solid e2e8f0;
+  font-family: IBM Plex Sans Thai, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+html {
+  line-height: 1.5;
+  width: 100%;
+  display: block;
+  font-size: 16px;
+  color: $color-text-black;
+  /* Edge */
+  ::-webkit-input-placeholder {
+    color: $color-text-grey;
+  }
+  /* Internet Explorer */
+  :-ms-input-placeholder {
+    color: $color-text-grey;
+  }
+  /* General */
+  ::placeholder {
+    color: $color-text-grey;
+  }
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.app {
+  /* text-align: center; */
+  /* display: flex; */
+  /* min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white; */
+  /* . */
+  min-height: 100vh;
+  background-image: url('./../../img/result-bg.png');
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  /* box-sizing: border-box; */
+}
+
+/* contentContainer maxwidth is 1280 */
+.contentContainer {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.whiteHeader {
+  background-color: $color-bg-white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid black;
+  .whiteHeaderLeft {
+    border: 2px solid red;
+    height: 60px;
+    padding: 10px 2rem;
+    @include mobile {
+      padding: 10px 1rem;
+    }
+    .logo {
+      height: 40px;
+      width: auto;
+      display: block;
+      @include mobile {
+        display: none;
+      }
+    }
+    .logoMini {
+      height: 40px;
+      width: auto;
+      @include mobile {
+        display: block;
+      }
+      @include desktop {
+        display: none;
+      }
+    }
+  }
+  .whiteHeaderRight {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    margin-left: auto;
+    align-items: center;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin-right: 2rem;
+    flex: 1;
+    box-shadow: 0px 0px 1px black;
+    border: 2px solid blue;
+    @include mobile {
+      margin-right: 1rem;
+    }
+    .location {
+      border: solid green;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height: 100%;
+      width: 12rem;
+      @include mobile {
+        display: none;
+      }
+      @include desktop {
+        display: block;
+      }
+    }
+    .finderInput {
+      border: solid green;
+      height: 100%;
+      width: calc(100%);
+      font-size: 1rem;
+      text-overflow: ellipsis;
+      padding-left: 11px;
+    }
+    .finderButton {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      padding: 0 1.5rem;
+      border: solid green;
+    }
+  }
+  .filter {
+    height: 20px;
+    width: auto;
+    display: none;
+    margin-right: 1rem;
+    cursor: pointer;
+    @include mobile {
+      display: block;
+    }
+  }
+}
+
+.blueHeader {
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  background-color: $color-bg-blue;
+  color: white;
+  height: 46px;
+  padding: 0.75rem 2rem;
+}
+.body {
+  // display: flex;
+  max-width: 1600px;
+  height: calc(100vh - 106px);
+  border: 2px solid black;
+  color: $color-text-black;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 1rem;
+  // font-weight: 600px;
+  /* min-height: 100vh; */
+  /* background-color: wheat; */
+  /* background-image:url(result-bg.png);
+  background-position:center;
+  background-size:cover;
+  background-attachment:fixed; */
+  .textSearchResult {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+    border: 2px solid black;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  .filterAndResults {
+    // height: 100%;
+    display: flex;
+    align-items: flex-start;
+    border: 2px solid black;
+    display: flex;
+    .leftBox {
+      border: 2px solid black;
+      background-color: white;
+      width: 460px;
+      margin-right: 2rem;
+      .filterBox {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .rightBox {
+      border: 2px solid black;
+    }
+  }
+}
+
+/* .App-logo {
+  height: 40vmin;
+  pointer-events: none;
+} */
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+
+/* .App-header {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+} */
+
+/* .App-link {
+  color: #61dafb;
+} */
+
+/* @keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
