@@ -1,10 +1,13 @@
 import logo from './img/halfhalf-logo.png'
 import logoMini from './img/halfhalf-logo-mini.png'
+import {SearchOutlined} from '@ant-design/icons'
 import './App.scss';
-
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'antd/dist/antd.css'
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+
+  
   return (
     <div className="App">
       <div className="whiteHeader contentContainer">
@@ -14,13 +17,23 @@ function App() {
             <img src={logoMini} className="logoMini" alt="logo" />
           </a>
         </div>
-        <div className="whiteHeaderRight">whiteHeaderRight</div>
+        <div className="whiteHeaderRight">
+          <div className="location">location</div>
+          <div className="finderInput">finderInput</div>
+          <div className="finderButton"><SearchOutlined /></div>
+        </div>
       </div>
-      <div className="blueHeader">blueHeader</div>
+      <div className="blueHeader">
+        <a href="/">หน้าแรก</a>
+        <p>/</p>
+        <a href="/">ค้นหา</a>
+      </div>
       <div className="body">
-        <div className="textSearchResult">textSearchResult</div>
-        <div className="leftBox">leftBox</div>
-        <div className="rightBox">rightBox</div>
+        <div className="textSearchResult">ผลการค้นหาสินค้าทั่วไปทั้งหมดห</div>
+        <div className="filterAndResults">
+          <div className="leftBox">leftBox</div>
+          <div className="rightBox">rightBox</div>
+        </div>
       </div>
     </div>
   );

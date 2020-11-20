@@ -1,5 +1,24 @@
 @import 'styles/color.scss';
 @import 'styles/responsive.scss';
+@import 'styles/fonts.scss';
+
+*{
+  box-sizing: border-box;
+  border: 0 solid e2e8f0;
+  font-family: IBM Plex Sans Thai,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+
+html{
+  line-height: 1.5;
+  width: 100%;
+  display: block;
+  font-size: 16px;
+}
+
+a{
+  color:white;
+  text-decoration: none;
+}
 
 .App {
   /* text-align: center; */
@@ -32,37 +51,77 @@
   justify-content: space-between;
   border: 2px solid black;
   color:black;
-}
-.whiteHeaderLeft{
-  border: 2px solid red;
-  height: 60px;
-  padding: 10px 32px;
-}
-.logo{
-  height:40px;
-  width:auto;
-  display:block;
-  @include mobile{
-    display: none;
+  .whiteHeaderLeft{
+    border: 2px solid red;
+    height: 60px;
+    padding: 10px 2rem;
+    @include mobile{
+      padding: 10px 1rem;
+    }
+    .logo{
+      height:40px;
+      width:auto;
+      display:block;
+      @include mobile{
+        display: none;
+      }
+    }
+    .logoMini{
+      height:40px;
+      width:auto;
+      @include mobile{
+        display: block;
+      }
+      @include desktop{
+        display: none;
+      }
+    }
+  }
+  .whiteHeaderRight{
+    display:flex;
+    justify-content: space-between;
+    height: 40px;
+    margin-left: auto;
+    align-items: center;
+    border-radius: .5rem;
+    overflow: hidden;
+    margin-right: 2rem;
+    flex:1;
+    box-shadow:0px 0px 1px black;
+    border: 2px solid blue;
+    @include mobile{
+      margin-right: 1rem;
+    }
+  }
+  .location{
+    border:solid green;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 12rem;
+    height: 100%;
+  }
+  .finderInput{
+    border:solid green;
+    height: 100%;
+    width: calc(100%);
+  }
+  .finderButton{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0 1.5rem;
+    border:solid green;
   }
 }
-.logoMini{
-  height:40px;
-  width:auto;
-  @include mobile{
-    display: block;
-  }
-  @include desktop{
-    display: none;
-  }
-}
-.whiteHeaderRight{
-  border: 2px solid blue;
-}
+
 
 .blueHeader{
   border: 2px solid black;
-  color:black;
+  display: flex;
+  align-items: center;
+  background-color: $color-bg-blue;
+  color: white;
 
 }
 .body{
@@ -74,17 +133,22 @@
   background-position:center;
   background-size:cover;
   background-attachment:fixed; */
+  .textSearchResult{
+      border: 2px solid black;
+  }
+  .filterAndResults{
+      border: 2px solid black;
+      display: flex;
+      .leftBox{
+        border: 2px solid black;
+      }
+      .rightBox{
+        border: 2px solid black;
+      }
+  }
 
 }
-.textSearchResult{
-  border: 2px solid black;
-}
-.leftBox{
-  border: 2px solid black;
-}
-.rightBox{
-  border: 2px solid black;
-}
+
 /* .App-logo {
   height: 40vmin;
   pointer-events: none;
