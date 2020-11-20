@@ -12,6 +12,7 @@
     display: flex;
     margin: 5px;
     border: 1px solid black;
+    padding: 5px;
     .imgContainer {
       overflow: hidden;
       width: 250px;
@@ -19,6 +20,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      border-radius: 2px;
       .merchantImg {
         @media (min-width: 1024px) {
           min-width: 250px; /*width of parent container*/
@@ -27,6 +29,7 @@
           max-height: 380px;
           object-fit: cover;
           position: relative;
+          border-radius: 2px;
         }
       }
     }
