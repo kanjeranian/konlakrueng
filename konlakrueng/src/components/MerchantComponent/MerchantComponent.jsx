@@ -9,7 +9,13 @@ export const MerchantComponent = () => {
     <div className='rightBox'>
       {state.data.merchants.map((merchant) => (
         <div className='merchantContainer'>
-          <div className='merchantImg'></div>
+          <div className='imgContainer'>
+            <img
+              className='merchantImg'
+              src={merchant.coverImageId}
+              alt='merchant'
+            />
+          </div>
           <div className='merchantDetail'>{merchant.shopNameTH}</div>
         </div>
       ))}
