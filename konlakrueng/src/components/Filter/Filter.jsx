@@ -39,7 +39,7 @@ export const SidebarComponent = () => {
 
   return (
     <div className='filterComponent'>
-      ประเภทร้านค้า
+      <p className='bold'>ประเภทร้านค้า</p>
       <form onChange={onCategoryChange}>
         {state.data.categories.map((category) => (
           <div key={category.name}>
@@ -53,23 +53,23 @@ export const SidebarComponent = () => {
           </div>
         ))}
       </form>
-      จังหวัด/ใกล้ฉัน
-      <form onChange={onLocationChange}>
-        <select
-          className='location'
-          name='locationSide'
-          onChange={onLocationChange}
-          value={state.province}>
-          <option value='all'>พื้นที่ทั้งหมด</option>
-          <option value='nearme'>พื้นที่ใกล้ฉัน</option>
-          {state.data.provinces.map((province) => (
-            <option value={province} key={province}>
-              {province}
-            </option>
-          ))}
-        </select>
-      </form>
-      ช่วงราคาสินค้า (บาท)
+      <p className='bold'>จังหวัด/ใกล้ฉัน</p>
+      {/* <form onChange={onLocationChange}> */}
+      <select
+        className='location'
+        name='locationSide'
+        onChange={onLocationChange}
+        value={state.province}>
+        <option value='all'>พื้นที่ทั้งหมด</option>
+        <option value='nearme'>พื้นที่ใกล้ฉัน</option>
+        {state.data.provinces.map((province) => (
+          <option value={province} key={province}>
+            {province}
+          </option>
+        ))}
+      </select>
+      {/* </form> */}
+      <p className='bold'>ช่วงราคาสินค้า (บาท)</p>
       <select
         className='price'
         name='price'
@@ -84,7 +84,7 @@ export const SidebarComponent = () => {
       </select>
       {state.subCategories.subcategories?.length > 0 && (
         <>
-          <p>ประเภทร้านค้า {state.category}</p>
+          <p className='bold'>ประเภท{state.category}</p>
           <form onChange={onSubCategoryChange}>
             {state.subCategories.subcategories &&
               state.subCategories.subcategories.map((category) => (

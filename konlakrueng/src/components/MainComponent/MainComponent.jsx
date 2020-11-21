@@ -36,7 +36,7 @@ export const Main = () => {
           <div className='textSearchResult'>ผลการค้นหาสินค้าทั่วไปทั้งหมด</div>
           <div className='filterAndResults'>
             <SidebarComponent />
-            <div className='rightBox'>
+            <div className='rightBoxx'>
               <MerchantComponent />
             </div>
           </div>

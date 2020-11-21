@@ -3,6 +3,11 @@
 @import './../../styles/fonts.scss';
 
 .filterComponent {
+  padding: 16px;
   display: flex;
   flex-direction: column;
+}
+
+.bold {
+  font-weight: 600;
 }

@@ -38,17 +38,51 @@
 }
 .suggestMenu {
 }
+
+.br {
+  border-bottom: 0.5px solid rgb(226, 232, 240);
+  width: 65%;
+  margin: 14px 0px;
+}
+.sep {
+  margin: 0px 15px;
+}
+.tagContainer {
+  .tag {
+    background-color: $color-bg-green;
+    margin: 0px 8px 0px 16px;
+    border-radius: 2px;
+    padding: 0 7px;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+  }
+  .tag2 {
+    background-color: #999999;
+    margin: 0px 8px 0px 16px;
+    border-radius: 2px;
+    padding: 0 7px;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+  }
+}
+
 .rightBox {
-  //   border: 1px solid black;
-  //   background-color: white;
   width: 100%;
-  display: flex;
+  //   display: flex;
   flex-direction: column;
+  @include mobile {
+    display: none;
+  }
+  @include desktop {
+    display: flex;
+  }
   .merchantContainer {
     background-color: white;
     display: flex;
     margin: 5px;
-    border: 1px solid black;
+    // border: 1px solid black;
     padding: 5px;
     .imgContainer {
       overflow: hidden;
@@ -91,32 +125,62 @@
     }
   }
 }
-
-.br {
-  border-bottom: 0.5px solid rgb(226, 232, 240);
-  width: 65%;
-  margin: 14px 0px;
-}
-.sep {
-  margin: 0px 15px;
-}
-.tagContainer {
-  .tag {
-    background-color: $color-bg-green;
-    margin: 0px 8px 0px 16px;
-    border-radius: 2px;
-    padding: 0 7px;
-    font-size: 12px;
-    font-weight: 600;
-    color: white;
+.rightBox2 {
+  width: 100%;
+  //   display: flex;
+  flex-direction: column;
+  @include mobile {
+    display: flex;
   }
-  .tag2 {
-    background-color: #999999;
-    margin: 0px 8px 0px 16px;
-    border-radius: 2px;
-    padding: 0 7px;
-    font-size: 12px;
-    font-weight: 600;
-    color: white;
+  @include desktop {
+    display: none;
+  }
+  .merchantContainer {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    // border: 1px solid black;
+    padding: 0;
+    .imgContainer {
+      overflow: hidden;
+      //   border: solid 2px black;
+      width: 100%;
+      height: 224px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 2px;
+      .merchantImg {
+        @media (min-width: 1024px) {
+          //   min-width: 250px; /*width of parent container*/
+          //   max-width: 380px;
+          //   min-height: 350px; /*height of parent container*/
+          //   max-height: 380px;
+          object-fit: cover;
+          position: relative;
+          border-radius: 2px;
+        }
+      }
+    }
+    .merchantDetail {
+      //   border: 1px solid green;
+      //   height: 234px;
+      width: 100%;
+      padding: 14px;
+      .cardHeader {
+        display: flex;
+        .cardName {
+          color: black;
+          font-size: 20px;
+          font-weight: 600;
+        }
+      }
+      .cardSubHeader {
+        display: flex;
+        color: $color-text-grey2;
+        flex-wrap: wrap;
+      }
+    }
   }
 }

@@ -9,6 +9,7 @@ import Car from './../../img/ที่จอดรถ.png';
 import Delivery from './../../img/บริการจัดส่งอาหาร.png';
 import Reserve from './../../img/รับจองล่วงหน้า.png';
 import Pet from './../../img/สามารถนำสัตว์เลี้ยงเข้าได้.png';
+import sanitizeHtml from 'sanitize-html';
 
 const Tag = ({ isOpen }) => {
   return (
@@ -49,61 +50,133 @@ const Facility = ({ facility }) => {
 
 export const MerchantComponent = () => {
   const { state } = useContext(StoreContext);
+
   return (
-    <div className='rightBox'>
-      {state.data.merchants.map((merchant) => (
-        <div className='merchantContainer'>
-          <div className='imgContainer'>
-            <img
-              className='merchantImg'
-              src={merchant.coverImageId}
-              alt='merchant'
-            />
+    <div>
+      <div className='rightBox'>
+        {state.data.merchants.map((merchant) => (
+          <div className='merchantContainer'>
+            <div className='imgContainer'>
+              <img
+                className='merchantImg'
+                src={merchant.coverImageId}
+                alt='merchant'
+              />
+            </div>
+            <div className='merchantDetail'>
+              <div className='cardHeader'>
+                <div className='cardName'>{merchant.shopNameTH}</div>
+                <Tag isOpen={merchant.isOpen} />
+              </div>
+              <div className='f14grey cardSubHeader'>
+                <div>{merchant.subcategoryName}</div>{' '}
+                <div className='sep'>|</div>
+                <div>
+                  <PriceLevel level={merchant.priceLevel} />
+                </div>
+                <div className='sep'>|</div>
+                <div>
+                  {merchant.addressDistrictName} {merchant.addressProvinceName}
+                </div>
+              </div>
+              <div className='br' />
+              <div className='f14grey'>
+                {merchant.highlightText && (
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: sanitizeHtml(merchant.highlightText),
+                    }}></div>
+                )}
+              </div>
+              {console.log(merchant.recommendedItems)}
+              {merchant.recommendedItems && (
+                <div className='suggestMenu'>
+                  <span className='f14'>เมนูแนะนำ: </span>
+                  {merchant.recommendedItems.map((m, index) => (
+                    <>
+                      {index !== 0 && <span>, </span>}
+                      <span className='f14grey'>{m}</span>
+                    </>
+                  ))}
+                </div>
+              )}
+              {merchant.facilities && (
+                <div className='facilityContainer'>
+                  {merchant.facilities.map((m) => (
+                    <>
+                      <Facility facility={m} />
+                    </>
+                  ))}
+                </div>
+              )}
+              {console.log(merchant.facilities)}
+            </div>
           </div>
-          <div className='merchantDetail'>
-            <div className='cardHeader'>
-              <div className='cardName'>{merchant.shopNameTH}</div>
-              <Tag isOpen={merchant.isOpen} />
+        ))}
+      </div>
+
+      <div className='rightBox2'>
+        {state.data.merchants.map((merchant) => (
+          <div className='merchantContainer'>
+            <div
+              className='imgContainer'
+              style={{
+                backgroundImage: `url('${merchant.coverImageId}')`,
+                backgroundPosition: 'center center',
+              }}>
+              "
+              {/* <img
+                className='merchantImg'
+                src={merchant.coverImageId}
+                alt='merchant'
+              /> */}
             </div>
-            <div className='f14grey cardSubHeader'>
-              <div>{merchant.subcategoryName}</div> <div className='sep'>|</div>
-              <div>
-                <PriceLevel level={merchant.priceLevel} />
+            <div className='merchantDetail'>
+              <div className='cardHeader'>
+                <div className='cardName'>{merchant.shopNameTH}</div>
+                <Tag isOpen={merchant.isOpen} />
               </div>
-              <div className='sep'>|</div>
-              <div>
-                {merchant.addressDistrictName} {merchant.addressProvinceName}
+              <div className='f14grey cardSubHeader'>
+                <div>{merchant.subcategoryName}</div>{' '}
+                <div className='sep'>|</div>
+                <div>
+                  <PriceLevel level={merchant.priceLevel} />
+                </div>
+                <div className='sep'>|</div>
+                <div>
+                  {merchant.addressDistrictName} {merchant.addressProvinceName}
+                </div>
               </div>
+              <div className='br' />
+              <div className='f14grey'>
+                {merchant.highlightText && <div>{merchant.highlightText}</div>}
+              </div>
+              {console.log(merchant.recommendedItems)}
+              {merchant.recommendedItems && (
+                <div className='suggestMenu'>
+                  <span className='f14'>เมนูแนะนำ: </span>
+                  {merchant.recommendedItems.map((m, index) => (
+                    <>
+                      {index !== 0 && <span>, </span>}
+                      <span className='f14grey'>{m}</span>
+                    </>
+                  ))}
+                </div>
+              )}
+              {merchant.facilities && (
+                <div className='facilityContainer'>
+                  {merchant.facilities.map((m) => (
+                    <>
+                      <Facility facility={m} />
+                    </>
+                  ))}
+                </div>
+              )}
+              {console.log(merchant.facilities)}
             </div>
-            <div className='br' />
-            <div className='f14grey'>
-              {merchant.highlightText && <div>{merchant.highlightText}</div>}
-            </div>
-            {console.log(merchant.recommendedItems)}
-            {merchant.recommendedItems && (
-              <div className='suggestMenu'>
-                <span className='f14'>เมนูแนะนำ: </span>
-                {merchant.recommendedItems.map((m, index) => (
-                  <>
-                    {index !== 0 && <span>, </span>}
-                    <span className='f14grey'>{m}</span>
-                  </>
-                ))}
-              </div>
-            )}
-            {merchant.facilities && (
-              <div className='facilityContainer'>
-                {merchant.facilities.map((m) => (
-                  <>
-                    <Facility facility={m} />
-                  </>
-                ))}
-              </div>
-            )}
-            {console.log(merchant.facilities)}
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
