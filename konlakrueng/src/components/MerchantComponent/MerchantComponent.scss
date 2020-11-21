@@ -1,15 +1,42 @@
 @import './../../styles/color.scss';
 @import './../../styles/responsive.scss';
 @import './../../styles/fonts.scss';
+
+.facilityContainer {
+  display: flex;
+  margin-top: 15px;
+}
+.circleDiv {
+  margin-right: 6px;
+  margin-bottom: 3px;
+  padding: 5px;
+  border-radius: 20px;
+  border: 1px solid rgb(108, 191, 95);
+  width: 30px;
+  height: 30px;
+  img {
+    width: 18px;
+    height: 18px;
+  }
+}
 .moneyDark {
   color: $color-text-dark-grey;
+}
+.f14 {
+  font-size: 14px;
+  margin-top: 15px;
+  color: #444444;
+  font-weight: 600;
 }
 .f14grey {
   color: $color-text-grey2;
   font-size: 14px;
+  margin-bottom: 12px;
 }
 .moneyLight {
   color: $color-text-grey3;
+}
+.suggestMenu {
 }
 .rightBox {
   //   border: 1px solid black;
@@ -76,6 +103,15 @@
 .tagContainer {
   .tag {
     background-color: $color-bg-green;
+    margin: 0px 8px 0px 16px;
+    border-radius: 2px;
+    padding: 0 7px;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+  }
+  .tag2 {
+    background-color: #999999;
     margin: 0px 8px 0px 16px;
     border-radius: 2px;
     padding: 0 7px;
