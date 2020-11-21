@@ -2,6 +2,10 @@
 @import './../../styles/responsive.scss';
 @import './../../styles/fonts.scss';
 
+.noborder {
+  border: none;
+  background-color: white;
+}
 .whiteHeader {
   background-color: $color-bg-white;
   display: flex;

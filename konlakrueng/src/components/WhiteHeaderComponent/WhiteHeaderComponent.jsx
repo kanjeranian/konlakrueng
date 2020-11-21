@@ -40,7 +40,7 @@ export const HeaderComponent = () => {
         </div>
         <form className='whiteHeaderRight' onSubmit={search}>
           <select
-            className='location'
+            className='location noborder'
             name='locationTop'
             onChange={onLocationChange}
             value={state.province}>
