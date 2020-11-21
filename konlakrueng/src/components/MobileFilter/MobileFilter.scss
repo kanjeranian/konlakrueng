@@ -21,6 +21,16 @@
   width: 100vw;
 }
 
+.hideCenter {
+  display: none;
+  visibility: hidden;
+}
+
+.showCenter {
+  display: block;
+  visibility: visible;
+}
+
 .blueHeaderForMobile {
   background-color: rgb(42, 67, 101);
   display: flex;

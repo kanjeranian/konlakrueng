@@ -149,7 +149,12 @@ export const MerchantComponent = () => {
               </div>
               <div className='br' />
               <div className='f14grey'>
-                {merchant.highlightText && <div>{merchant.highlightText}</div>}
+                {merchant.highlightText && (
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: sanitizeHtml(merchant.highlightText),
+                    }}></div>
+                )}
               </div>
               {console.log(merchant.recommendedItems)}
               {merchant.recommendedItems && (

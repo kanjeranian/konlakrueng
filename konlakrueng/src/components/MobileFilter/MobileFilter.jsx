@@ -17,7 +17,12 @@ export const MobileFilter = ({ isOpen }) => {
         <div onClick={onBackButtonClicked} className='left'>
           &lt;
         </div>
-        <div className='center'>กรอกผล</div>
+        <div
+          className={`center ${
+            state.filterOpen ? 'showCenter' : 'hideCenter'
+          } `}>
+          กรอกผล
+        </div>
       </div>
       <Filter />
     </div>
