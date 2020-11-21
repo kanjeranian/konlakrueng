@@ -82,6 +82,8 @@ a {
     // border: 2px solid black;
     font-size: 1.25rem;
     font-weight: 600;
+    margin-top: -15px;
+    padding-bottom: 20px;
   }
   .filterAndResults {
     // height: 100%;
@@ -99,5 +101,9 @@ a {
         flex-direction: column;
       }
     }
+  }
+
+  .rightBoxx {
+    width: 100%;
   }
 }

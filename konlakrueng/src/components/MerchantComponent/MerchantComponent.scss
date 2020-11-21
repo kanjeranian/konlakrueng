@@ -72,7 +72,7 @@
   width: 100%;
   //   display: flex;
   flex-direction: column;
-  @include mobile {
+  @include tablet {
     display: none;
   }
   @include desktop {
@@ -129,7 +129,7 @@
   width: 100%;
   //   display: flex;
   flex-direction: column;
-  @include mobile {
+  @include tablet {
     display: flex;
   }
   @include desktop {

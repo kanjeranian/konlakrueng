@@ -1,5 +1,5 @@
 $screen-sm: 768px;
-$screen-md: 992px;
+$screen-md: 1024px;
 $screen-lg: 1200px;
 $screen-xl: 1400px;
 
@@ -13,8 +13,14 @@ $screen-md-max: $screen-lg - 1;
   }
 }
 
+@mixin tablet {
+  @media only screen and (max-width: $screen-md) {
+    @content;
+  }
+}
+
 @mixin desktop {
-  @media only screen and (min-width: $screen-sm) {
+  @media only screen and (min-width: $screen-lg) {
     @content;
   }
 }
