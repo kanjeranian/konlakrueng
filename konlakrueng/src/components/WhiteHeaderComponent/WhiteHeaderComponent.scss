@@ -18,14 +18,17 @@
     .logo {
       height: 40px;
       width: auto;
-      display: block;
       @include mobile {
         display: none;
+      }
+      @include desktop {
+        display: block;
       }
     }
     .logoMini {
       height: 40px;
       width: auto;
+      display: none;
       @include mobile {
         display: block;
       }

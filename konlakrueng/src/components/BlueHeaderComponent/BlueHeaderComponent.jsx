@@ -6,9 +6,13 @@ export const BlueHeaderComponent = () => {
   return (
     <div className='blueHeader2'>
       <div className='blueHeader contentContainer'>
-        <a href='/'>หน้าแรก</a>
-        <p>/</p>
-        <a href='/'>ค้นหา</a>
+        <a className='linkLine' href='/'>
+          หน้าแรก
+        </a>
+        <p className='hasSpace'> / </p>
+        <a className='linkLine' href='/'>
+          ค้นหา
+        </a>
       </div>
     </div>
   );
