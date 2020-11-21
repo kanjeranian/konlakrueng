@@ -12,6 +12,7 @@ const initialState = {
   subCategories: [],
   selectedSubCategory: '',
   priceRange: 'all',
+  filterOpen: false,
 };
 
 const reducer = (state, action) => {
@@ -44,6 +45,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         priceRange: action.payload,
+      };
+    case 'TOGGLE_FILTER':
+      return {
+        ...state,
+        filterOpen: !state.filterOpen,
       };
     default:
       return state;

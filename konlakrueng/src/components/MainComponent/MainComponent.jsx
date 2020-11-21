@@ -6,6 +6,7 @@ import MerchantComponent from '../MerchantComponent';
 import SidebarComponent from '../SidebarComponent';
 import WhiteHeaderComponent from '../WhiteHeaderComponent';
 import BlueHeaderComponent from '../BlueHeaderComponent';
+import MobileFilter from '../MobileFilter';
 
 // import style from './main.scss';
 
@@ -25,15 +26,19 @@ export const Main = () => {
   console.log(state);
 
   return (
-    <div className='app'>
-      <WhiteHeaderComponent />
-      <BlueHeaderComponent />
-      <div className='body'>
-        <div className='textSearchResult'>ผลการค้นหาสินค้าทั่วไปทั้งหมด</div>
-        <div className='filterAndResults'>
-          <SidebarComponent />
-          <div className='rightBox'>
-            <MerchantComponent />
+    <div className='outerContainer'>
+      <MobileFilter isOpen={state.filterOpen} />
+      <div className='background'></div>
+      <div className='app'>
+        <WhiteHeaderComponent />
+        <BlueHeaderComponent />
+        <div className='body'>
+          <div className='textSearchResult'>ผลการค้นหาสินค้าทั่วไปทั้งหมด</div>
+          <div className='filterAndResults'>
+            <SidebarComponent />
+            <div className='rightBox'>
+              <MerchantComponent />
+            </div>
           </div>
         </div>
       </div>

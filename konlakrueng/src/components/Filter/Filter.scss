@@ -1,0 +1,8 @@
+@import './../../styles/color.scss';
+@import './../../styles/responsive.scss';
+@import './../../styles/fonts.scss';
+
+.filterComponent {
+  display: flex;
+  flex-direction: column;
+}

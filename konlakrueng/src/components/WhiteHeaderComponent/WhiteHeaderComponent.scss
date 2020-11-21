@@ -7,9 +7,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 2px solid black;
+  // border: 2px solid black;
   .whiteHeaderLeft {
-    border: 2px solid red;
+    // border: 2px solid red;
     height: 60px;
     padding: 10px 2rem;
     @include mobile {
@@ -45,12 +45,12 @@
     margin-right: 2rem;
     flex: 1;
     box-shadow: 0px 0px 1px black;
-    border: 2px solid blue;
+    // border: 2px solid blue;
     @include mobile {
       margin-right: 1rem;
     }
     .location {
-      border: solid green;
+      // border: solid green;
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -64,7 +64,7 @@
       }
     }
     .finderInput {
-      border: solid green;
+      // border: solid green;
       height: 100%;
       width: calc(100%);
       font-size: 1rem;
@@ -76,7 +76,7 @@
       height: 100%;
       align-items: center;
       padding: 0 1.5rem;
-      border: solid green;
+      // border: solid green;
     }
   }
   .filter {
@@ -89,4 +89,7 @@
       display: block;
     }
   }
+}
+.whiteHeader2 {
+  background-color: white;
 }

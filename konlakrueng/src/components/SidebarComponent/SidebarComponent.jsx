@@ -44,7 +44,12 @@ export const SidebarComponent = () => {
         <form onChange={onCategoryChange}>
           {state.data.categories.map((category) => (
             <div key={category.name}>
-              <input type='radio' value={category.name} name='category' />
+              <input
+                type='radio'
+                value={category.name}
+                name='category'
+                checked={state.category === category.name}
+              />
               <label htmlFor={category.name}>{category.name}</label>
             </div>
           ))}
@@ -56,8 +61,8 @@ export const SidebarComponent = () => {
             name='locationSide'
             onChange={onLocationChange}
             value={state.province}>
-            <option value='all'>All</option>
-            <option value='nearme'>Near me</option>
+            <option value='all'>พื้นที่ทั้งหมด</option>
+            <option value='nearme'>พื้นที่ใกล้ฉัน</option>
             {state.data.provinces.map((province) => (
               <option value={province} key={province}>
                 {province}
@@ -85,7 +90,12 @@ export const SidebarComponent = () => {
               {state.subCategories.subcategories &&
                 state.subCategories.subcategories.map((category) => (
                   <div key={category}>
-                    <input type='radio' value={category} name='category' />
+                    <input
+                      type='radio'
+                      value={category}
+                      name='category'
+                      checked={state.selectedSubCategory === category}
+                    />
                     <label htmlFor={category}>{category}</label>
                   </div>
                 ))}
