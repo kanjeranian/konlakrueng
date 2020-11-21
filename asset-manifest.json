@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/konlakrueng/static/css/main.731aef65.chunk.css",
-    "main.js": "/konlakrueng/static/js/main.26fc4a79.chunk.js",
-    "main.js.map": "/konlakrueng/static/js/main.26fc4a79.chunk.js.map",
+    "main.css": "/konlakrueng/static/css/main.ad51c491.chunk.css",
+    "main.js": "/konlakrueng/static/js/main.f7a84030.chunk.js",
+    "main.js.map": "/konlakrueng/static/js/main.f7a84030.chunk.js.map",
     "runtime-main.js": "/konlakrueng/static/js/runtime-main.9d93ddcc.js",
     "runtime-main.js.map": "/konlakrueng/static/js/runtime-main.9d93ddcc.js.map",
     "static/js/2.5879b5ad.chunk.js": "/konlakrueng/static/js/2.5879b5ad.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.bacff9c6.chunk.js": "/konlakrueng/static/js/3.bacff9c6.chunk.js",
     "static/js/3.bacff9c6.chunk.js.map": "/konlakrueng/static/js/3.bacff9c6.chunk.js.map",
     "index.html": "/konlakrueng/index.html",
-    "static/css/main.731aef65.chunk.css.map": "/konlakrueng/static/css/main.731aef65.chunk.css.map",
+    "static/css/main.ad51c491.chunk.css.map": "/konlakrueng/static/css/main.ad51c491.chunk.css.map",
     "static/js/2.5879b5ad.chunk.js.LICENSE.txt": "/konlakrueng/static/js/2.5879b5ad.chunk.js.LICENSE.txt",
     "static/media/MainComponent.scss": "/konlakrueng/static/media/result-bg.ac869927.png"
   },
   "entrypoints": [
     "static/js/runtime-main.9d93ddcc.js",
     "static/js/2.5879b5ad.chunk.js",
-    "static/css/main.731aef65.chunk.css",
-    "static/js/main.26fc4a79.chunk.js"
+    "static/css/main.ad51c491.chunk.css",
+    "static/js/main.f7a84030.chunk.js"
   ]
 }
