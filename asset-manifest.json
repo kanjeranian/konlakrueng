@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/konlakrueng/static/css/main.76947f21.chunk.css",
+    "main.css": "/konlakrueng/static/css/main.d92f6b62.chunk.css",
     "main.js": "/konlakrueng/static/js/main.bcb61efa.chunk.js",
     "main.js.map": "/konlakrueng/static/js/main.bcb61efa.chunk.js.map",
     "runtime-main.js": "/konlakrueng/static/js/runtime-main.9d93ddcc.js",
@@ -10,14 +10,14 @@
     "static/js/3.bacff9c6.chunk.js": "/konlakrueng/static/js/3.bacff9c6.chunk.js",
     "static/js/3.bacff9c6.chunk.js.map": "/konlakrueng/static/js/3.bacff9c6.chunk.js.map",
     "index.html": "/konlakrueng/index.html",
-    "static/css/main.76947f21.chunk.css.map": "/konlakrueng/static/css/main.76947f21.chunk.css.map",
+    "static/css/main.d92f6b62.chunk.css.map": "/konlakrueng/static/css/main.d92f6b62.chunk.css.map",
     "static/js/2.5879b5ad.chunk.js.LICENSE.txt": "/konlakrueng/static/js/2.5879b5ad.chunk.js.LICENSE.txt",
     "static/media/MainComponent.scss": "/konlakrueng/static/media/result-bg.ac869927.png"
   },
   "entrypoints": [
     "static/js/runtime-main.9d93ddcc.js",
     "static/js/2.5879b5ad.chunk.js",
-    "static/css/main.76947f21.chunk.css",
+    "static/css/main.d92f6b62.chunk.css",
     "static/js/main.bcb61efa.chunk.js"
   ]
 }
