@@ -24,7 +24,9 @@ export const MobileFilter = ({ isOpen }) => {
           กรอกผล
         </div>
       </div>
-      <Filter />
+      <div className='maxH'>
+        <Filter />
+      </div>
     </div>
   );
 };
